@@ -1,6 +1,6 @@
 # Ackintosh::Net::EmptyPort
 
-TODO: Write a gem description
+Find a free TCP/UDP port.
 
 ## Installation
 
@@ -18,7 +18,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Find free TCP port
+
+    port = Ackintosh::Net::EmptyPort.find
+
+### Find free UDP port
+
+    port = Ackintosh::Net::EmptyPort.find("udp")
+
+### Check the given port is already used.
+
+    Ackintosh::Net::EmptyPort.used?(80, "tcp")
+
+also works for UDP.
+
+### Author
+
+Akihito Nakano
 
 ## Contributing
 
